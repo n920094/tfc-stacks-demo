@@ -19,11 +19,4 @@ module "sql_server" {
   sku_name               = "GP_Standard_D2ds_v4"
 
   tags = var.tags
-
-  lifecycle {
-    ignore_changes = [
-      zone,
-      high_availability["standby_availability_zone"],
-    ]
-  }
 }
