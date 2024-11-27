@@ -1,5 +1,5 @@
 locals {
-  location = "eastus"
+  location = "japaneast"
   project = "tfstack-testing"
 }
 
