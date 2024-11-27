@@ -21,7 +21,7 @@ variable "tags" {
 variable "vm_sku_size" {
   description = "Size of the VM"
   type        = string
-  default     = "Standard_B1s"
+  default     = "Standard_D2s_v3"
 }
 
 variable "vm_zone" {
