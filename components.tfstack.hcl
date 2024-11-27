@@ -34,6 +34,7 @@ component "vm" {
     }
 }
 
+/*
 component "database" {
     source = "./database"
 
@@ -52,3 +53,4 @@ component "database" {
 
     depends_on = [component.vm]
 }
+*/
