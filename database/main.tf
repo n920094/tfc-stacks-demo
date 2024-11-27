@@ -20,3 +20,10 @@ module "sql_server" {
 
   tags = var.tags
 }
+
+lifecycle {
+  ignore_changes = [
+    zone,
+    high_availability["standby_availability_zone"],
+  ]
+}
