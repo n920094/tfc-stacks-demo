@@ -19,7 +19,6 @@ module "avm-res-dbforpostgresql-flexibleserversql_server" {
   administrator_login    = "mradministrator"
   administrator_password = "P@ssw0rd12345!"
   sku_name               = "GP_Standard_D2ds_v4"
-  create_mode            = "PointInTimeRestore"
-  source_server_id       = module.avm-res-dbforpostgresql-flexibleserversql_server.pg_id
+  create_mode            = "Update"
   tags                   = var.tags
 }
