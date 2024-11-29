@@ -7,9 +7,9 @@ resource "azurerm_resource_group" "main" {
   location = var.location
 }
 
-module "avm-res-dbforpostgresql-flexibleserversql_server" {
-  source  = "Azure/avm-res-dbforpostgresql-flexibleserver/azurerm"
-  version = "0.1.2"
+module "sql_server" {
+  source  = "Azure/avm-res-dbformysql-flexibleserver/azurerm"
+  version = "0.1.0"
 
   name                   = local.name
   location               = azurerm_resource_group.main.location
@@ -17,8 +17,8 @@ module "avm-res-dbforpostgresql-flexibleserversql_server" {
   administrator_login    = "mradministrator"
   administrator_password = "P@ssw0rd12345!"
   sku_name               = "GP_Standard_D2ds_v4"
-  tags                   = var.tags
   server_version         = "16"
+  tags                   = var.tags
 
   /*
   name                   = local.name
