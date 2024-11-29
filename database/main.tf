@@ -20,8 +20,8 @@ module "mysql" {
   mysql_version          = "8.0.21"
   zone                   = 1
   high_availability = {
-    mode                      = "ZoneRedundant"
-    standby_availability_zone = 2
+    mode                      = "SameZone"
+    standby_availability_zone = 1
   }
   tags = var.tags
 
