@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "main" {
   location = var.location
 }
 
-module "sql_server" {
+module "mysql" {
   source  = "Azure/avm-res-dbformysql-flexibleserver/azurerm"
   version = "0.1.0"
 
@@ -17,7 +17,7 @@ module "sql_server" {
   administrator_login    = "mradministrator"
   administrator_password = "P@ssw0rd12345!"
   sku_name               = "GP_Standard_D2ds_v4"
-  server_version         = "16"
+  mysql_version          = "8.0.21"
   tags                   = var.tags
 
   /*
