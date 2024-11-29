@@ -18,10 +18,10 @@ module "mysql" {
   administrator_password = "P@ssw0rd12345!"
   sku_name               = "GP_Standard_D2ds_v4"
   mysql_version          = "8.0.21"
-  zone                   = 1
+  zone                   = 2
   high_availability = {
-    mode                      = "SameZone"
-    standby_availability_zone = 1
+    mode                      = "ZoneRedundant"
+    standby_availability_zone = 3
   }
   tags = var.tags
 
