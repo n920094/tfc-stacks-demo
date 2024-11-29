@@ -7,16 +7,10 @@ resource "azurerm_resource_group" "main" {
   location = var.location
 }
 
-module "database" {
-  source  = "Azure/database/azurerm"
-  version = "2.0.0"
-
-  db_name            = local.name
-  location           = azurerm_resource_group.main.location
-  sql_admin_username = "mradministrator"
-  sql_password       = "P@ssw0rd12345!"
-
-  /*
+module "avm-res-dbforpostgresql-flexibleserversql_server" {
+  source = "Azure/avm-res-dbforpostgresql-flexibleserver/azurerm"
+  version = "0.1.2"
+ /*
   name                   = local.name
   location               = azurerm_resource_group.main.location
   resource_group_name    = azurerm_resource_group.main.name
@@ -24,6 +18,7 @@ module "database" {
   administrator_password = "P@ssw0rd12345!"
   sku_name               = "GP_Standard_D2ds_v4"
   create_mode            = "Update"
-  tags                   = var.tags
-*/
+
+  tags = var.tags
+  */
 }
