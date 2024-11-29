@@ -18,7 +18,11 @@ module "mysql" {
   administrator_password = "P@ssw0rd12345!"
   sku_name               = "GP_Standard_D2ds_v4"
   mysql_version          = "8.0.21"
-  tags                   = var.tags
+  zone                   = "1"
+  high_availability {
+    standby_availability_zone = "2"
+  }
+  tags = var.tags
 
   /*
   name                   = local.name
