@@ -7,9 +7,9 @@ resource "azurerm_resource_group" "main" {
   location = var.location
 }
 
-module "sql_server" {
-  source  = "Azure/avm-res-dbformysql-flexibleserver/azurerm"
-  version = "0.1.0"
+module "avm-res-dbforpostgresql-flexibleserversql_server" {
+  source  = "Azure/avm-res-dbforpostgresql-flexibleserver/azurerm"
+  version = "0.1.2"
   #source  = "app.terraform.io/TED_EVAL/avm-res-dbforpostgresql-flexibleserver/azurerm"
   #version = "1.0.0"
 
