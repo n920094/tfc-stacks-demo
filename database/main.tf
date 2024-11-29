@@ -18,7 +18,7 @@ module "avm-res-dbforpostgresql-flexibleserversql_server" {
   administrator_password = "P@ssw0rd12345!"
   sku_name               = "GP_Standard_D2ds_v4"
   tags                   = var.tags
-
+  server_version         = "16"
 
   /*
   name                   = local.name
