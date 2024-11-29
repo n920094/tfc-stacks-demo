@@ -9,7 +9,7 @@ resource "azurerm_resource_group" "main" {
 
 module "avm-res-dbforpostgresql-flexibleserversql_server" {
   source = "Azure/avm-res-dbforpostgresql-flexibleserver/azurerm"
-  #version = "0.1.2"
+  version = "0.1.2"
   #source  = "app.terraform.io/TED_EVAL/avm-res-dbforpostgresql-flexibleserver/azurerm"
   #version = "1.0.0"
 
@@ -19,7 +19,7 @@ module "avm-res-dbforpostgresql-flexibleserversql_server" {
   administrator_login    = "mradministrator"
   administrator_password = "P@ssw0rd12345!"
   sku_name               = "GP_Standard_D2ds_v4"
-  version                = "12"
+  create_mode            = "Update"
 
   tags = var.tags
 }
