@@ -23,7 +23,7 @@ component "vm" {
         prefix = var.prefix
         suffix = var.suffix
         #vm_subnet_id = component.network.subnet_ids[0]
-        vm_subnet_id = subnet1
+        vm_subnet_id = component.vm_subnet_id
         tags = var.tags
     }
 
