@@ -22,7 +22,7 @@ component "vm" {
         location = var.location
         prefix = var.prefix
         suffix = var.suffix
-        vm_subnet_id = try(component.network.subnet_ids[0]m null)
+        vm_subnet_id = try(component.network.subnet_ids[0], null)
         tags = var.tags
     }
 
