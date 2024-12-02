@@ -17,7 +17,7 @@ module "mysql" {
   administrator_login    = "mradministrator"
   administrator_password = "P@ssw0rd12345!"
   sku_name               = "GP_Standard_D2ds_v4"
-  mysql_version          = "8.0.21"
+ # mysql_version          = "8.0.21"
   zone                   = 2
   high_availability = {
     mode                      = "ZoneRedundant"
