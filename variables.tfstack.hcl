@@ -26,7 +26,8 @@ variable "cidr_range" {
 
 variable "subnets" {
   description = "Subnets for the vnet"
-  type        = map(list(string))
+  #type        = map(list(string))
+  type        = string
 }
 
 variable "identity_token" { 
