@@ -16,7 +16,7 @@ deployment "dev" {
 
         location = local.location
         prefix = "tf-stack-dev"
-        suffix = "202412"
+        suffix = "202501"
         cidr_range = "10.0.0.0/16"
         subnets = {
             subnet1 = ["10.0.0.0/24"]
